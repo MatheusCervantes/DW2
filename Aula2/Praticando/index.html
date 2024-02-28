@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+    <title>Busca</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Oswald&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1>Formulário de Cadastro</h1>
+        <hr>
+        <form class="row g-3">
+            <div class="col-12">
+                <label for="nome" class="form-label">Nome completo:</label>
+                <input type="text" class="form-control" id="nome" required>
+            </div>
+            <div class="col-md-4">
+                <label for="telefone" class="form-label">Telefone</label>
+                <input type="text" class="form-control" id="telefone" required
+                    pattern="\([0-9]{2}\)[0-9]{4,6}-[0-9]{3,4}$" title="Digite o telefone no formato (DD)XXXXX-XXXX"
+                    placeholder="(DD)XXXXX-XXXX" name="telefone" data-mask="(00)00000-0000"
+                    data-mask-selectonfocus="true" />
+            </div>
+            <div class="col-md-8">
+                <label for="email" class="form-label">E-mail</label>
+                <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="col-md-4">
+                <label for="cpf" class="form-label">CPF</label>
+                <input type="text" class="form-control" id="cpf" required pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                    title="Digite o CPF no formato XXX.XXX.XXX-XX" placeholder="XXX.XXX.XXX-XX">
+            </div>
+            <div class="col-md-4">
+                <label for="dtanasc" class="form-label">Data de Nascimento</label>
+                <input type="date" class="form-control" id="dtanasc" required>
+            </div>
+            <div class="col-md-4">
+                <label for="cep" class="form-label">CEP</label>
+                <input type="text" class="form-control" id="cep" required pattern="\d{2}\.\d{3}-\d{3}"
+                    title="Digite o CEP no formato XX.XXX-XXX" placeholder="XX.XXX-XXX">
+            </div>
+            <div class="col-md-8">
+                <label for="endereco" class="form-label">Endereço</label>
+                <input type="text" class="form-control" id="endereco" required placeholder="Rua, nº e bairro">
+            </div>
+            <div class="col-md-4">
+                <label for="cidade" class="form-label">Cidade</label>
+                <select class="form-select" id="cidade" required>
+                    <option selected disabled value="">[selecione]</option>
+                </select>
+            </div>
+            <div class="col-md-6">
+                <label for="imgperfil" class="form-label">Foto de perfil</label>
+                <input type="file" accept="image/*" class="form-control" id="imgperfil" required>
+            </div>
+            <div class="col-md-6">
+                <label for="contrato" class="form-label">Contrato assinado (em PDF)</label>
+                <input type="file" accept="application/pdf" class="form-control" id="contrato" required>
+            </div>
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit">Cadastrar</button>
+                <button class="btn btn-warning" type="reset">Limpar</button>
+            </div>
+    </div>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#telefone').mask('(00)00000-0000');
+            $('#cpf').mask('000.000.000-00', {reverse: true});
+            $('#cep').mask('00.000-000');
+        });
+    </script>
+
+</body>
+
+</html>
