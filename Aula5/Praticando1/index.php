@@ -6,7 +6,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=deviTitlece-width, initial-scale=1, shrink-to-fit=no" />
 
-    <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 </head>
 
@@ -29,13 +28,13 @@
         </form>
 
         <?php
-        $numero = $_GET["numero"];
+        $numero = isset($_GET["numero"]) ? $_GET["numero"] : null;
 
         if (!empty($numero)) {
             echo '<br><h2>Tabuada do ' . $numero . '</h2><hr>';
 
             for ($multiplicador = 1; $multiplicador <= 10; $multiplicador++) {
-                echo $multiplicador . ' x ' . $numero . ' = ' . $multiplicador * $numero . '<br>';
+                echo $numero . ' x ' . $multiplicador . ' = ' . $multiplicador * $numero . '<br>';
             }
         }
         ?>

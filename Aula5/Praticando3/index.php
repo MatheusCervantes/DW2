@@ -6,7 +6,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=deviTitlece-width, initial-scale=1, shrink-to-fit=no" />
 
-    <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 
     <style>
@@ -58,25 +57,25 @@
         function verificarParOuImpar($numero)
         {
             if ($numero % 2 == 0) {
-                return " Além disso ele é um núemro <span>PAR</span>";
+                return " Além disso ele é um número <span>PAR</span>";
             } else {
-                return " Além disso ele é um núemro <span>ÍMPAR</span>";
+                return " Além disso ele é um número <span>ÍMPAR</span>";
             }
         }
 
-        $numero = $_GET["numero"];
+        $numero = isset($_GET["numero"]) ? $_GET["numero"] : null;
 
-        if (ehPrimo($numero) == true) {
+        if (ehPrimo($numero) == true && $numero != null) {
             $mensagem = 'O número <span>' . $numero . '</span> <span>é</span> um número <span>PRIMO</span>.';
             $mensagem .= verificarParOuImpar($numero);
             $mensagem = '<p id="primo">' . $mensagem . '</p>';
-        } else {
+            echo "<br> <br>$mensagem";
+        } else if (ehPrimo($numero) != true && $numero != null) {
             $mensagem = 'O número <span>' . $numero . '</span> <span>não é</span> um número <span>PRIMO</span>.';
             $mensagem .= verificarParOuImpar($numero);
             $mensagem = '<p id="nprimo">' . $mensagem . '</p>';
+            echo "<br> <br>$mensagem";
         }
-
-        echo "<br> <br>$mensagem";
         ?>
     </main>
 
