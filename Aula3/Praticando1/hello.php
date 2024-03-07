@@ -9,16 +9,15 @@
 </head>
 
 <body>
-    <h1>My first PHP page</h1>
+    <h1>Essa é minha segunda página PHP</h1>
 
     <?php
-        echo "Hello World";
+        echo "Essa é uma outra página";
     ?>
     
     <br>
     <br>
-    <a href="index.php">Voltar</a>
-
+    <a href="../../Aula3/Praticando1/">Voltar</a>
 </body>
 
 </html>
