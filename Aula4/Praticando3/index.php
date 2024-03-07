@@ -13,7 +13,7 @@
 </head>
 
 <body class="container">
-    <h1>Praticando 3 - Animais</h1>
+    <h1>Praticando 3 - Animais</h1> 
     <hr>
 
     <?php
