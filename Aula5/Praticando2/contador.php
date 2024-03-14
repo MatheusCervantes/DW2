@@ -22,16 +22,15 @@
     Incremento: $incremento <br><br>";
 
     if ($inicio > $final) {
-        for (; $final != $inicio; $inicio -= $incremento) {
-            echo "$inicio  ";
-        }
-        echo "$inicio ";
-    } else {
-        for (; $final != $inicio; $inicio += $incremento) {
+        for (; $final < $inicio && $inicio >= 0; $inicio -= $incremento) {
             echo "$inicio ";
         }
-        echo "$inicio ";
+    } else {
+        for (; $final > $inicio && $inicio >= 0; $inicio += $incremento) {
+            echo "$inicio ";
+        }
     }
+
     ?>
 
 </body>
