@@ -50,16 +50,16 @@
                 </div>';
         } else {
             echo '<div class="container border border-dark mt-5 mb-5 p-4">
-                        <p>Página <b>inicio.php</b>:';
+                        <p>Página <b>inicio.php</b>: ';
             $inicio = file_get_contents('banco/inicio.txt');
             echo $inicio . ' Acessos.</p>
-                        <p>Página <b>sobre.php</b>:';
+                        <p>Página <b>sobre.php</b>: ';
             $sobre = file_get_contents('banco/sobre.txt');
             echo $sobre . ' Acessos.</p>
-                        <p>Página <b>contato.php</b>:';
+                        <p>Página <b>contato.php</b>: ';
             $contato = file_get_contents('banco/contato.txt');
             echo $contato . ' Acessos.</p>
-                        <p><b>Total</b>:';
+                        <p><b>Total</b>: ';
             $total = file_get_contents('banco/total.txt');
             echo $total . ' Acessos.</p>
                         <hr>
