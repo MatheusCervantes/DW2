@@ -1,6 +1,6 @@
 $(document).ready(function () {
     var nomeArquivo = window.location.pathname.split('/').pop();
-    if (nomeArquivo === 'index.php') {
+    if (nomeArquivo === 'inicio.php') {
         $.ajax({
             type: 'GET',
             url: 'calcular_acessos.php?id=1',
