@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Contato</title>
+    <title>Início</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
@@ -20,17 +20,17 @@
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item d-flex nowrap align-items-center">
                             <div>
-                                <img src="imagens/contato.png" alt="Logo" width="40" height="40" class="d-inline-block align-top">
+                                <img src="imagens/inicio.png" alt="Logo" width="40" height="40" class="d-inline-block align-top">
                             </div>
-                            <div class="nav-link active inicio" aria-current="page" href="">Contato</div>
+                            <div class="nav-link active inicio" aria-current="page" href="">Início</div>
                         </li>
                     </ul>
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="inicio.php">Início</a>
+                            <a class="nav-link" href="sobre.php">Sobre</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="sobre.php">Sobre</a>
+                            <a class="nav-link" href="contato.php">Contato</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active" href="logs.php">Logs de Acesso</a>
@@ -45,17 +45,17 @@
         <div class="container border border-dark mt-5 mb-5 p-4">
             <div class="d-flex justify-content-center">
                 <div class="titulo p-4 mb-3">
-                    <h1>Contato</h1>
+                    <h1>Início</h1>
                 </div>
             </div>
             <div>
-                <img src="imagens/contatoimg.png" alt="contato" class="img">
+                <img src="imagens/inicioimg.png" alt="Imagem de início" class="img">
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident sed accusamus nesciunt inventore eos quis temporibus quod natus nulla quidem? Eligendi ducimus amet exercitationem dignissimos, dolor in nesciunt enim veniam.
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat hic a provident quod. Iure nesciunt illum corporis id hic voluptatem quod dicta obcaecati. Recusandae asperiores ipsa fugit, rerum velit beatae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, voluptas? Cumque tempore expedita quos exercitationem tempora sequi vel ducimus, culpa ut nostrum? Ullam neque illum expedita possimus rerum dicta! Voluptate.
                 </p>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit molestiae blanditiis laudantium nihil cupiditate iusto ipsum eveniet ex voluptatibus in id cumque aspernatur, exercitationem asperiores accusantium aut. Ad, consequatur pariatur? .Provident sed accusamus nesciunt inventore eos quis temporibus quod natus nulla quidem? Eligendi ducimus amet exercitationem dignissimos, dolor in nesciunt enim veniam.</p>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident sed accusamus nesciunt inventore eos quis temporibus quod natus nulla quidem? Eligendi ducimus amet exercitationem dignissimos, dolor in nesciunt enim veniam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi alias dolores non vitae deserunt aliquid consequatur! Autem hic, quia nemo fugit, laborum veniam harum ratione accusantium quae dolorem eos corporis!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quas expedita a, ipsa nisi alias. Voluptatum consequuntur corrupti, aperiam unde obcaecati voluptas, odio autem vel delectus quis voluptates nihil tempore? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident sed accusamus nesciunt inventore eos quis temporibus quod natus nulla quidem? Eligendi ducimus amet exercitationem dignissimos, dolor in nesciunt enim veniam.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus quas expedita a, ipsa nisi alias. Voluptatum consequuntur corrupti, aperiam unde obcaecati voluptas, odio autem vel delectus quis voluptates nihil tempore? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Provident sed accusamus nesciunt inventore eos quis temporibus quod natus nulla quidem? Eligendi ducimus amet exercitationem dignissimos, dolor in nesciunt enim veniam. Repellendus quas expedita a, ipsa nisi alias.</p>
             </div>
         </div>
         <div class="preencher"></div>
