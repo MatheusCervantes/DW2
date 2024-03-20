@@ -16,13 +16,14 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <div class="collapse navbar-collapse">
+                <img src="imagens/sobre.png" alt="Logo" width="40" height="40" class="d-inline-block align-top">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto">
-                        <li class="nav-item d-flex nowrap align-items-center">
-                            <div>
-                                <img src="imagens/sobre.png" alt="Logo" width="40" height="40" class="d-inline-block align-top">
-                            </div>
-                            <div class="nav-link active inicio" aria-current="page" href="">Sobre</div>
+                        <li class="nav-item">
+                            <a class="nav-link active inicio" aria-current="page" href="#">Sobre</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav ms-auto">
@@ -39,6 +40,7 @@
                 </div>
             </div>
         </nav>
+
     </header>
 
     <main>

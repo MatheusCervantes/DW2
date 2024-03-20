@@ -1,5 +1,6 @@
 .img {
     width: 20em;
+    height: 20em;
     float: right;
 }
 
@@ -13,9 +14,10 @@ body {
     font-family: "Michroma", sans-serif;
 }
 
-main >div {
+main>div {
     background-color: lightgray;
     color: black;
+    font-size: 100%;
 }
 
 .titulo {
@@ -24,6 +26,10 @@ main >div {
     border: black solid 2px;
     text-align: center;
     background-color: rgb(188, 188, 188);
+}
+
+.titulo>h1 {
+    font-size: 250%;
 }
 
 .preencher_log {
@@ -36,4 +42,8 @@ main >div {
     height: 0.25em;
     width: 100%;
     background-color: gray;
+}
+
+p {
+    font-size: 100%;
 }
