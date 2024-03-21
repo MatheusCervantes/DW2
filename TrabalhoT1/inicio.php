@@ -23,7 +23,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
-                            <a class="nav-link active inicio" aria-current="page" href="#">Início</a>
+                            <div class="nav-link active inicio">Início</div>
                         </li>
                     </ul>
                     <ul class="navbar-nav ms-auto">
