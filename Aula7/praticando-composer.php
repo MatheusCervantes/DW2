@@ -37,7 +37,7 @@
                 $cep = $_POST["cep"];
                 require 'vendor/autoload.php';
                 $address = CepPromise::fetch($cep);
-                echo '<div class="mt-3 container border border-2 border-success bg-success-subtle"> <h1>CEP: ' . vsprintf("%s%s%s%s%s-%s%s%s", str_split($address->zipCode)) . '</h1>';
+                echo '<div class="mt-3 container border border-2 border-success bg-success-subtle"> <h1>CEP: ' . substr_replace($address->zipCode, '-', 5, 0) . '</h1>';
                 echo '<p>Rua: ' .  $address->street . '</p>';
                 echo '<p>Bairro: ' .  $address->district . '</p>';
                 echo '<p>Cidade: ' .  $address->city . '</p>';
