@@ -61,7 +61,7 @@
             $contato = file_get_contents('banco/contato.txt');
             echo $contato . ' Acessos.</p>
                         <p><b>Total</b>: ';
-            $total = file_get_contents('banco/total.txt');
+            $total = intval(file_get_contents('banco/inicio.txt')) + intval(file_get_contents('banco/sobre.txt')) + intval(file_get_contents('banco/contato.txt'));
             echo $total . ' Acessos.</p>
                         <hr>
                         <table class="table table-striped table-dark">

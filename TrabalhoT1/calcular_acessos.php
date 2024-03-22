@@ -9,21 +9,36 @@ function sobscrever($dados, $arquivo)
 
 function get_browser_name() {
     $user_agent = $_SERVER['HTTP_USER_AGENT'];
-    $browser_names = array(
-        'Opera',
-        'Edge',
-        'Chrome',
-        'Safari',
-        'Firefox',
-        'MSIE',
-        'Trident'
-    );
-    foreach ($browser_names as $browser_name) {
-        if (strpos($user_agent, $browser_name) !== false) {
-            return $browser_name;
-        }
+
+    $browser_name = 'Unknown';
+
+    if (strpos($user_agent, 'Opera') || strpos($user_agent, 'OPR/')) {
+        $browser_name = 'Opera';
+    } elseif (strpos($user_agent, 'Edg')) {
+        $browser_name = 'Microsoft Edge';
+    } elseif (strpos($user_agent, 'Edge')) {
+        $browser_name = 'Microsoft Edge (Legacy)';
+    } elseif (strpos($user_agent, 'Chrome')) {
+        $browser_name = 'Google Chrome';
+    } elseif (strpos($user_agent, 'Safari')) {
+        $browser_name = 'Safari';
+    } elseif (strpos($user_agent, 'Firefox')) {
+        $browser_name = 'Mozilla Firefox';
+    } elseif (strpos($user_agent, 'MSIE') || strpos($user_agent, 'Trident/7')) {
+        $browser_name = 'Internet Explorer';
     }
-    return 'Unknown';
+
+    return $browser_name;
+}
+
+if (!file_exists('banco/inicio.txt')) {
+    sobscrever(0, 'banco/inicio.txt');
+}
+if (!file_exists('banco/sobre.txt')) {
+    sobscrever(0, 'banco/sobre.txt');
+}
+if (!file_exists('banco/contato.txt')) {
+    sobscrever(0, 'banco/contato.txt');
 }
 
 $id = $_GET["id"];
@@ -57,7 +72,3 @@ switch ($id) {
         sobscrever($log, 'banco/log.txt');
         break;
 }
-
-$total = intval(file_get_contents('banco/total.txt'));
-$total = intval(file_get_contents('banco/inicio.txt')) + intval(file_get_contents('banco/sobre.txt')) + intval(file_get_contents('banco/contato.txt'));
-sobscrever($total, 'banco/total.txt');
