@@ -29,17 +29,21 @@
         </form>
 
         <?php
+
         use Claudsonm\CepPromise\CepPromise;
         use Claudsonm\CepPromise\Exceptions\CepPromiseException;
+
         try {
-            $cep = isset($_POST["cep"]) ? $_POST["cep"] : null;
-            require 'vendor/autoload.php';
-            $address = CepPromise::fetch($cep);
-            echo '<div class="mt-3 container border border-2 border-success bg-success-subtle"> <h1>CEP: ' . vsprintf("%s%s%s%s%s-%s%s%s", str_split($address->zipCode)) . '</h1>';
-            echo '<p>Rua: ' .  $address->street . '</p>';
-            echo '<p>Bairro: ' .  $address->district . '</p>';
-            echo '<p>Cidade: ' .  $address->city . '</p>';
-            echo '<p>Estado: ' .  $address->state . '</p> </div>';
+            if (isset($_POST["cep"]) && !empty($_POST["cep"])) {
+                $cep = $_POST["cep"];
+                require 'vendor/autoload.php';
+                $address = CepPromise::fetch($cep);
+                echo '<div class="mt-3 container border border-2 border-success bg-success-subtle"> <h1>CEP: ' . vsprintf("%s%s%s%s%s-%s%s%s", str_split($address->zipCode)) . '</h1>';
+                echo '<p>Rua: ' .  $address->street . '</p>';
+                echo '<p>Bairro: ' .  $address->district . '</p>';
+                echo '<p>Cidade: ' .  $address->city . '</p>';
+                echo '<p>Estado: ' .  $address->state . '</p> </div>';
+            }
         } catch (CepPromiseException $e) {
             $errors = $e->toArray();
             echo '<div class="mt-3 container border border-2 border-danger bg-danger-subtle"> <h1>CEP: ' . $cep . '</h1>
