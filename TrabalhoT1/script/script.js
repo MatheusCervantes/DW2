@@ -1,32 +1,10 @@
 $(document).ready(function () {
-    var nomeArquivo = window.location.pathname.split('/').pop();
-    if (nomeArquivo === 'inicio.php') {
-        $.ajax({
-            type: 'GET',
-            url: 'calcular_acessos.php?id=1',
-            async: true,
-        });
-    }
-});
-
-$(document).ready(function () {
-    var nomeArquivo = window.location.pathname.split('/').pop();
-    if (nomeArquivo === 'sobre.php') {
-        $.ajax({
-            type: 'GET',
-            url: 'calcular_acessos.php?id=2',
-            async: true,
-        });
-    }
-});
-
-$(document).ready(function () {
-    var nomeArquivo = window.location.pathname.split('/').pop();
-    if (nomeArquivo === 'contato.php') {
-        $.ajax({
-            type: 'GET',
-            url: 'calcular_acessos.php?id=3',
-            async: true,
-        });
-    }
+    var pagina_atual = window.location.pathname.split("/").pop();
+    var link = 'calcular_acessos.php?pagina_atual=' + pagina_atual;
+    $.ajax({
+        type: 'POST',
+        url: 'calcular_acessos.php',
+        async: true,
+        data: { pagina_atual: pagina_atual }
+    });
 });
