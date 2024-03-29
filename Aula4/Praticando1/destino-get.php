@@ -39,15 +39,15 @@
         </p>
 
         <div class="d-flex justify-content-evenly">
-            <a href="destino-get.php?nome=<?=$nome?>&&email=<?=$email?>&&cor=red">
+            <a href="destino-get.php?nome=<?=$nome?>&&email=<?=$email?>&&cor=lightcoral">
                 <div class="quadrado bg-danger border border-black"></div>
             </a>
 
-            <a href="destino-get.php?nome=<?=$nome?>&&email=<?=$email?>&&cor=green">
+            <a href="destino-get.php?nome=<?=$nome?>&&email=<?=$email?>&&cor=lightgreen">
                 <div class="quadrado bg-success border border-black"></div>
             </a>
 
-            <a href="destino-get.php?nome=<?=$nome?>&&email=<?=$email?>&&cor=blue">
+            <a href="destino-get.php?nome=<?=$nome?>&&email=<?=$email?>&&cor=lightblue">
                 <div class="quadrado bg-primary border border-black"></div>
             </a>
         </div>
