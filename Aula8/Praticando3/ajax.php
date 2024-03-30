@@ -21,7 +21,7 @@ switch ($id) {
     case 'cep':
         setcookie('cookieCEP', $value, time() + 60 * 60);
         break;
-    case 'limpar':
+    case 'limparcookies':
         setcookie('cookieNOME', $value, time() + 60 * 60);
         setcookie('cookieTEL', $value, time() + 60 * 60);
         setcookie('cookieEMAIL', $value, time() + 60 * 60);

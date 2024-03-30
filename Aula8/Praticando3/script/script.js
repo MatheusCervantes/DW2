@@ -18,7 +18,7 @@ $('#nome, #tel, #email, #cpf, #date, #cep').blur(function () {
     });
 });
 
-$('#limpar').click(function () {
+$('#limparcookies').click(function () {
     id = $(this).attr('id');
     value = '';
     $.ajax({
@@ -28,4 +28,8 @@ $('#limpar').click(function () {
         data: { id: id, value: value },
         success: console.log('Cookies apagados.')
     });
+});
+
+$('#limpar').click(function () {
+    $('#nome, #tel, #email, #cpf, #date, #cep').val('');
 });

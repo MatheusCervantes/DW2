@@ -18,7 +18,7 @@
 
         <div class="row">
             <div class="col-8">
-                <form class="row g-3" action="#" method="POST">
+                <form class="row g-3">
                     <div class="col-12">
                         <div class="mb-2">
                             <label for="nome">Nome completo:</label>
@@ -47,8 +47,8 @@
                     </div>
                     <div class="col-12">
                         <button type="submit" class="btn btn-primary">Cadastrar</button>
-                        <button type="reset" class="btn btn-warning">Limpar</button>
-                        <button type="buttun" class="btn btn-danger" id="limpar">Limpar Cookies</button>
+                        <button type="button" class="btn btn-warning" id="limpar">Limpar</button>
+                        <button type="button" class="btn btn-danger" id="limparcookies">Limpar Cookies</button>
                     </div>
                 </form>
             </div>
