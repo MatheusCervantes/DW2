@@ -28,5 +28,4 @@ $('#limpar').click(function () {
         data: { id: id, value: value },
         success: console.log('Cookies apagados.')
     });
-    location.reload();
 });
