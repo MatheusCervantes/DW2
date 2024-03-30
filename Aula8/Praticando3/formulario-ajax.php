@@ -47,7 +47,8 @@
                     </div>
                     <div class="col-12">
                         <button type="submit" class="btn btn-primary">Cadastrar</button>
-                        <button type="reset" class="btn btn-warning" id="limpar">Limpar</button>
+                        <button type="reset" class="btn btn-warning">Limpar</button>
+                        <button type="buttun" class="btn btn-danger" id="limpar">Limpar Cookies</button>
                     </div>
                 </form>
             </div>

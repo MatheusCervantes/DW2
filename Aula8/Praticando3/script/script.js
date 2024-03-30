@@ -4,75 +4,17 @@ $(document).ready(function () {
     $('#cep').mask('00.000-000');
 });
 
-$('#nome').blur(function () {
-    id = $(this).attr('id');
-    value = $('#nome').val();
+$('#nome, #tel, #email, #cpf, #date, #cep').blur(function () {
+    var id = $(this).attr('id');
+    var value = $(this).val();
     $.ajax({
         type: 'POST',
         url: 'ajax.php',
         async: true,
         data: { id: id, value: value },
-        success: console.log('Cookie do campo #nome criado.')
-    });
-});
-
-$('#tel').blur(function () {
-    id = $(this).attr('id');
-    value = $('#tel').val();
-    $.ajax({
-        type: 'POST',
-        url: 'ajax.php',
-        async: true,
-        data: { id: id, value: value },
-        success: console.log('Cookie do campo #tel criado.')  
-    });
-});
-
-$('#email').blur(function () {
-    id = $(this).attr('id');
-    value = $('#email').val();
-    $.ajax({
-        type: 'POST',
-        url: 'ajax.php',
-        async: true,
-        data: { id: id, value: value },
-        success: console.log('Cookie do campo #email criado.')  
-    });
-});
-
-$('#cpf').blur(function () {
-    id = $(this).attr('id');
-    value = $('#cpf').val();
-    $.ajax({
-        type: 'POST',
-        url: 'ajax.php',
-        async: true,
-        data: { id: id, value: value },
-        success: console.log('Cookie do campo #cpf criado.')  
-    });
-});
-
-$('#date').blur(function () {
-    id = $(this).attr('id');
-    value = $('#date').val();
-    $.ajax({
-        type: 'POST',
-        url: 'ajax.php',
-        async: true,
-        data: { id: id, value: value },
-        success: console.log('Cookie do campo #date criado.')  
-    });
-});
-
-$('#cep').blur(function () {
-    id = $(this).attr('id');
-    value = $('#cep').val();
-    $.ajax({
-        type: 'POST',
-        url: 'ajax.php',
-        async: true,
-        data: { id: id, value: value },
-        success: console.log('Cookie do campo #cep criado.')  
+        success: function() {
+            console.log('Cookie do campo #' + id + ' criado.');
+        }
     });
 });
 
@@ -87,9 +29,4 @@ $('#limpar').click(function () {
         success: console.log('Cookies apagados.')
     });
     location.reload();
-});
-
-$('#limpar').click(function () {
-    location.reload();
-    console.log('Campos limpos.');
 });
