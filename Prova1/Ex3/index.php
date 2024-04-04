@@ -49,11 +49,11 @@ require '../include/header.php';
             echo "<p>As condições de pagamento são: </p>";
 
             echo '<ul>
-            <li>à vista: <b> R$' . $valor * 0.95 . ',00</b></li>
-            <li>parcelado em 3x de <b> R$' . round(($valor / 3), 2) . ',00</b> totalizando <b>R$ ' . $valor . ',00</b> </li>
-            <li>parcelado em 5x de <b> R$' . round((($valor * 1.05) / 5), 2) . ',00</b> totalizando <b>R$ ' . $valor * 1.05 . ',00</b> <span class="text-danger"><b>(5% de acréscimo)</b></span></li>
-            <li>parcelado em 12x de <b> R$' . round((($valor * 1.1) / 12), 2) . ',00</b> totalizando <b>R$ ' . $valor * 1.1 . ',00</b> <span class="text-danger"><b>(10% de acréscimo)</b></span></li>
-            <li>parcelado em 18x de <b> R$' . round((($valor * 1.15) / 18), 2) . ',00</b> totalizando <b>R$ ' . $valor * 1.15 . ',00</b> <span class="text-danger"><b>(15% de acréscimo)</b></span></li>
+            <li>à vista: <b> R$' . $valor * 0.95 . '</b></li>
+            <li>parcelado em 3x de <b> R$' . round(($valor / 3), 2) . '</b> totalizando <b>R$ ' . $valor . '.00</b> </li>
+            <li>parcelado em 5x de <b> R$' . round((($valor * 1.05) / 5), 2) . '</b> totalizando <b>R$ ' . $valor * 1.05 . '</b> <span class="text-danger"><b>(5% de acréscimo)</b></span></li>
+            <li>parcelado em 12x de <b> R$' . round((($valor * 1.1) / 12), 2) . '</b> totalizando <b>R$ ' . $valor * 1.1 . '0</b> <span class="text-danger"><b>(10% de acréscimo)</b></span></li>
+            <li>parcelado em 18x de <b> R$' . round((($valor * 1.15) / 18), 2) . '</b> totalizando <b>R$ ' . $valor * 1.15 . '</b> <span class="text-danger"><b>(15% de acréscimo)</b></span></li>
             </ul>';
         }
         ?>
