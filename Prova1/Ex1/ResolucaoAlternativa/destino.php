@@ -9,8 +9,6 @@
 
 <body class="container">
     <?php
-
-    //Utilizado para fazer sem cookies
     if (
         isset($_POST["titulo"]) && isset($_POST["corpo"]) && isset($_POST["imagem"])
         && isset($_POST["alinhamento_pag"]) && isset($_POST["mostrarimagem"]) && isset($_POST["cor"])
@@ -23,9 +21,9 @@
         $cor = $_POST["cor"];
 
         setcookie('cookieTITULO', $titulo, time() + 60 * 60);
-        setcookie('cookieALINHAMENTO', $corpo, time() + 60 * 60);
-        setcookie('cookieCORPO', $imagem, time() + 60 * 60);
-        setcookie('cookieIMAGEM', $alinhamento, time() + 60 * 60);
+        setcookie('cookieALINHAMENTO', $alinhamento, time() + 60 * 60);
+        setcookie('cookieCORPO', $corpo, time() + 60 * 60);
+        setcookie('cookieIMAGEM', $imagem, time() + 60 * 60);
         setcookie('cookieMOSTRARIMG', $mostrarimagem, time() + 60 * 60);
         setcookie('cookieCOR', $cor, time() + 60 * 60);
     } else {
