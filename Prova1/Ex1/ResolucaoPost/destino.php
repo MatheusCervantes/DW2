@@ -11,36 +11,12 @@
     <?php
 
     //Utilizado para fazer sem cookies
-    /*$titulo = $_POST["titulo"];
+    $titulo = $_POST["titulo"];
     $corpo = $_POST["corpo"];
     $imagem  = $_POST["imagem"];
     $alinhamento = $_POST["alinhamento_pag"];
     $mostrarimagem = $_POST["mostrarimagem"];
-    $cor = $_POST["cor"];*/
-
-    if (isset($_COOKIE['cookieTITULO'])) {
-        $titulo = $_COOKIE['cookieTITULO'];
-    }
-
-    if (isset($_COOKIE['cookieALINHAMENTO'])) {
-        $alinhamento = $_COOKIE['cookieALINHAMENTO'];
-    }
-
-    if (isset($_COOKIE['cookieCORPO'])) {
-        $corpo = $_COOKIE['cookieCORPO'];
-    }
-
-    if (isset($_COOKIE['cookieIMAGEM'])) {
-        $imagem  = $_COOKIE['cookieIMAGEM'];
-    }
-
-    if (isset($_COOKIE['cookieMOSTRARIMG'])) {
-        $mostrarimagem = $_COOKIE['cookieMOSTRARIMG'];
-    }
-
-    if (isset($_COOKIE['cookieCOR'])) {
-        $cor = $_COOKIE['cookieCOR'];
-    }
+    $cor = $_POST["cor"];
 
     echo '<h1 class = "alinhamento">' . $titulo . '</h1> <hr>';
     echo '<p class = "alinhamento">' . $corpo . '</p>';
