@@ -1,0 +1,5 @@
+Aula 2
+    Framework, ferramente pronta para facilitar criação de códigos.
+    Laravel utiliza MVC.
+    Fácil de criar códigos e flexível.
+    Possui uma estrutura de pastas simples e bem organizada.
