@@ -14,10 +14,10 @@ jobs:
     - name: Copy files with SSH
       uses: easingthemes/ssh-deploy@main
       env:
-        SSH_PRIVATE_KEY: ${{secrets.SERVIDORA1}}
+        SSH_PRIVATE_KEY: ${{secrets.SERVIDORA1}} 
         ARGS: "-rltgoDzvO --delete"
         SOURCE: "./"
-        REMOTE_HOST: "clinica.brazilsouth.cloudapp.azure.com"
-        REMOTE_USER: "azureuser"
+        REMOTE_HOST: "servidoraula.ddns.net"
+        REMOTE_USER: "ubuntu"
         TARGET: "/var/www/html/DWS2"
         EXCLUDE: "/dist/, /vendor/, /node_modules/, **.env"
