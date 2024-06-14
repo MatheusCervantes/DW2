@@ -14,7 +14,7 @@ jobs:
     - name: Copy files with SSH
       uses: easingthemes/ssh-deploy@main
       env:
-        SSH_PRIVATE_KEY: ${{secrets.AZURE_STATIC_WEB_APPS_API_TOKEN_YELLOW_SKY_097ACDC0F}}
+        SSH_PRIVATE_KEY: ${{secrets.SERVIDORA1}}
         ARGS: "-rltgoDzvO --delete"
         SOURCE: "./"
         REMOTE_HOST: "clinica.brazilsouth.cloudapp.azure.com"
