@@ -38,7 +38,7 @@
                     </svg>
                 </div>
 
-                <h1>Teste de alteração com deploy automático.</h1>
+                <h1>Teste de alteração com deploy automático</h1>
                 <hr>
 
                 <div class="mt-16">
