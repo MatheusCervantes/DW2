@@ -38,5 +38,6 @@
 
     <!-- Comentário em HTML -->
     {{-- Comentário em BLADE --}}
-
+    {{-- Comentário em Teste --}}
+    
     @endsection
