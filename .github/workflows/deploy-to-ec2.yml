@@ -15,7 +15,7 @@ jobs:
       uses: easingthemes/ssh-deploy@main
       env:
         SSH_PRIVATE_KEY: ${{secrets.SERVIDORA1}} 
-        ARGS: "-rltgoDzvO"
+        ARGS: "-rltgoDzvO --delete"
         SOURCE: "./"
         REMOTE_HOST: "servidoraula.ddns.net"
         REMOTE_USER: "ubuntu"
