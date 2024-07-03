@@ -20,13 +20,7 @@ jobs:
         username: ${{ secrets.REMOTE_USER }}
         key: ${{ secrets.SERVIDORA1 }}
         script: |
-          cd /var/www
-          sudo chown -R $USER:www-data html
-          cd /var/www/html/DWS2/CursoLaravel
-          sudo chown -R $USER:www-data storage
-          sudo chown -R $USER:www-data bootstrap/cache
-          sudo chmod -R 775 storage
-          sudo chmod -R 775 bootstrap/cache
+          ./home/ubuntu/scripts/update_permissions.sh
 
     - name: Copy files with SSH
       uses: easingthemes/ssh-deploy@main
@@ -46,20 +40,4 @@ jobs:
         username: ${{ secrets.REMOTE_USER }}
         key: ${{ secrets.SERVIDORA1 }}
         script: |
-          cd /var/www/html/DWS2/CursoLaravel
-          composer install --no-dev --optimize-autoloader
-          npm install
-          npm run build
-          php artisan migrate --force
-          php artisan optimize:clear
-          php artisan config:cache
-          php artisan route:cache
-          php artisan view:cache
-          cd /var/www
-          sudo chown -R $USER:www-data html
-          cd /var/www/html/CursoLaravel
-          sudo chown -R $USER:www-data storage
-          sudo chown -R $USER:www-data bootstrap/cache
-          sudo chmod -R 775 storage
-          sudo chmod -R 775 bootstrap/cache
-          sudo service apache2 restart
+          ./home/ubuntu/scripts/deploy.sh
