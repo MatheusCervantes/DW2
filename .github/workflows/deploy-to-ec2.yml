@@ -13,19 +13,19 @@ jobs:
     - name: Checkout the files
       uses: actions/checkout@v4
 
-    - name: Update permissions on server
+    - name: Update permissions
       uses: appleboy/ssh-action@master
       with:
         host: ${{ secrets.REMOTE_HOST }}
         username: ${{ secrets.REMOTE_USER }}
         key: ${{ secrets.SERVIDORA1 }}
         script: |
-          ./home/ubuntu/scripts/update_permissions.sh
+          /home/ubuntu/scripts/update_permissions.sh
 
     - name: Copy files with SSH
       uses: easingthemes/ssh-deploy@main
       env:
-        SSH_PRIVATE_KEY: ${{ secrets.SERVIDORA1 }} 
+        SSH_PRIVATE_KEY: ${{ secrets.SERVIDORA1 }}
         ARGS: "-rltgoDzvO --delete"
         SOURCE: "./"
         REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
@@ -40,4 +40,4 @@ jobs:
         username: ${{ secrets.REMOTE_USER }}
         key: ${{ secrets.SERVIDORA1 }}
         script: |
-          ./home/ubuntu/scripts/deploy.sh
+          /home/ubuntu/scripts/deploy.sh
