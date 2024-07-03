@@ -1,8 +1,10 @@
 name: Push-to-EC2
+
 on:
   push:
     branches:
       - main
+
 jobs:
   deploy:
     name: Deploy
@@ -14,10 +16,28 @@ jobs:
     - name: Copy files with SSH
       uses: easingthemes/ssh-deploy@main
       env:
-        SSH_PRIVATE_KEY: ${{secrets.SERVIDORA1}} 
+        SSH_PRIVATE_KEY: ${{ secrets.SERVIDORA1 }} 
         ARGS: "-rltgoDzvO --delete"
         SOURCE: "./"
-        REMOTE_HOST: "servidoraula.ddns.net"
-        REMOTE_USER: "ubuntu"
+        REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+        REMOTE_USER: ${{ secrets.REMOTE_USER }}
         TARGET: "/var/www/html/DWS2"
-        EXCLUDE: "/dist/, /CursoLaravel/node_modules/, /CursoLaravel/vendor, /CursoLaravel/public/img/events, **.env"
+        EXCLUDE: "/dist/, /CursoLaravel/node_modules/, /CursoLaravel/vendor, **.env"
+
+    - name: Execute deploy script on server
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.REMOTE_HOST }}
+        username: ${{ secrets.REMOTE_USER }}
+        key: ${{ secrets.SERVIDORA1 }}
+        script: |
+          cd /var/www/html/DWS2/CursoLaravel
+          composer install --no-dev --optimize-autoloader
+          npm install
+          npm run build
+          php artisan migrate --force
+          php artisan optimize:clear
+          php artisan config:cache
+          php artisan route:cache
+          php artisan view:cache
+          sudo service apache2 restart
