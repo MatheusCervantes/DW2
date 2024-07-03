@@ -58,6 +58,7 @@ class EventController extends Controller
     public function show($id)
     {
         $event = Event::findOrFail($id);
+        $event->date = new \DateTime($event->date);
         $eventOwner = User::where('id', $event->user_id)->first()->toArray();
         return view('events.show', ['event' => $event, 'eventOwner' => $eventOwner]);
     }
@@ -74,6 +75,26 @@ class EventController extends Controller
     {
         Event::findOrFail($id)->delete();
         return redirect('/dashboard')->with('msg', 'Evento excluído com sucesso!');
+    }
+
+    public function edit($id)
+    {
+        $event = Event::findOrFail($id);
+        return view('events.edit', ['event' => $event]);
+    }
+
+    public function update(Request $request)
+    {
+        $data = request()->all();
+        if ($request->hasFile('image') && $request->file('image')->isValid()) {
+            $requestImage = $request->image;
+            $extension = $requestImage->extension();
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime('now') . "." . $extension);
+            $requestImage->move(public_path('img/events'), $imageName);
+            $data['image'] = $imageName;
+        }
+        Event::findOrfail($request->id)->update($data);
+        return redirect('/dashboard')->with('msg', 'Evento editado com sucesso!');
     }
 
     public function joinEvent($id)
