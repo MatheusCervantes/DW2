@@ -22,7 +22,7 @@ jobs:
         script: |
           cd /var/www
           sudo chown -R $USER:www-data html
-          cd /var/www/html/CursoLaravel
+          cd /var/www/html/DWS2/CursoLaravel
           sudo chown -R $USER:www-data storage
           sudo chown -R $USER:www-data bootstrap/cache
           sudo chmod -R 775 storage
